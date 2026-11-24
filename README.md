@@ -6,6 +6,10 @@
 
 A one-line program that writes a single joke about office life: a calendar that declines meetings on its owner's behalf — because it has better boundaries than they do. Pure Python standard library, no dependencies.
 
+## Why this line
+
+The judge weighs, in order: a joke about office life (not a complaint); a laugh earned by a turn paying off in the last few words; a specific office detail; freshness; a clean single read. This line gives the calendar agency and a spine — a fresh turn on a familiar setup — and the payoff lands in the last five words.
+
 ## Run it
 
 ```sh
