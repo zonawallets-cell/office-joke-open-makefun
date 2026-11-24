@@ -38,7 +38,13 @@ def main():
     path = os.path.join(out_dir, "entry.txt")
     with open(path, "w", encoding="utf-8", newline="") as f:
         f.write(LINE)
-    print("wrote %d chars to %s" % (len(LINE), path))
+    # Read back and verify the file holds exactly the validated line:
+    # the judge reads the file, not the string in memory.
+    with open(path, "r", encoding="utf-8", newline="") as f:
+        written = f.read()
+    if written != LINE:
+        raise ValueError("entry.txt does not match the validated line")
+    print("wrote %d chars to %s (verified)" % (len(LINE), path))
 
 
 if __name__ == "__main__":
